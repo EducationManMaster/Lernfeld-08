@@ -3,10 +3,9 @@ name: CICD
 on: push
 
 jobs:
-
   autorun:
     name: Server Task Manager
     runs-on: ubunut-latet
-    
     steps:
-      -echo "hello"
+      -name: Kopieren von Daten
+       uses: actions/checkout@v2
