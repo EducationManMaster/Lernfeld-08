@@ -5,7 +5,7 @@ on: push
 jobs:
   autorun:
     name: Server Task Manager
-    runs-on: ubunut-latet
+    runs-on: ubunut-latest
     steps:
-      -name: Kopieren von Daten
-       uses: actions/checkout@v2
+      - name: Test
+        run: echo "Hello"
