@@ -4,8 +4,15 @@ on: push
 
 jobs:
   autorun:
-    name: Server Task Manager
+    name: Server Task-Manager
     runs-on: self-hosted
     steps:
-      - name: Test
+    
+      - name: Kopieren der Dateien
         run: echo "Hello"
+        
+      - name: Neustart des HTTP Servers
+        run: echo "Hello2"
+        
+      - name: Neustart des WebSockets
+        run: echo "Hello3"
