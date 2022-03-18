@@ -44,7 +44,7 @@ async def update(websocket):
             await websocket.send(getStats())
 
 async def main():
-    async with websockets.serve(update, "localhost", 1337):
+    async with websockets.serve(update, "0.0.0.0", 1337):
         await asyncio.Future()
 
 asyncio.run(main())
