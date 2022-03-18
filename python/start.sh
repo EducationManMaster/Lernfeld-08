@@ -1,2 +1,2 @@
 #!/bin/bash
-python3 lf8_taskmanager_socket.py > python.log &
+python lf8_taskmanager_socket.py > python.log &
