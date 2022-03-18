@@ -5,7 +5,7 @@ on: push
 jobs:
   autorun:
     name: Server Task Manager
-    runs-on: ubunut-latest
+    runs-on: self-hosted
     steps:
       - name: Test
         run: echo "Hello"
