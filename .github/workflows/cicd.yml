@@ -17,4 +17,4 @@ jobs:
       - name: Start des WebSockets
         with:
           python-version: '3.x'
-          run: chmod +x taskmanager/python/start.sh && python3 taskmanager/python/start.sh
+      - run: chmod +x taskmanager/python/start.sh && python3 taskmanager/python/start.sh
