@@ -1,4 +1,4 @@
-var websocket = new WebSocket("ws://localhost:1337");
+var websocket = new WebSocket("ws://"+window.location.host+":1337");
 clockTime();
 
 websocket.onopen = function(event){
