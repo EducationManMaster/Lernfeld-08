@@ -1,3 +1,17 @@
+var testData = {
+
+  http:"Warnung",
+  websocket:"Normal",
+  cpu:"12%",
+  ram:"22%",
+  temp:"79°C",
+  disk:"11%",
+  network:"eth1",
+  ip:"192.168.0.22",
+  processes:"12"
+
+}
+
 function updateValues(data) {
 
   var http = document.getElementById("http");

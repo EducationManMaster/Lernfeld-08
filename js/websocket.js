@@ -1,9 +1,9 @@
-var websocket = new WebSocket("ws://localhost:1337")
+var websocket = new WebSocket("ws://localhost:1337");
+clockTime();
 
 websocket.onopen = function(event){
 
   websocket.send("getUpdate");
-  clockTime();
 
 };
 
@@ -17,20 +17,25 @@ websocket.onmessage = function(event) {
 
 
 websocket.addEventListener("error", websocketError);
-function websocketError() {
+async function websocketError() {
 
   var websocket = document.getElementById("websocket");
   websocket.innerHTML = "Fehler";
   websocket.parentElement.getElementsByClassName("half_status_stat")[0].className = "half_status_stat" + getTextColor("Fehler");
 
+  await sleep(10000);
+  location.reload();
+
 }
 
 function isOpen(ws) { return ws.readyState === ws.OPEN }
 
+function sleep(ms){ return new Promise(resolve => setTimeout(resolve, ms)); }
+
 
 var updateTime = Date.now();
 var tickTime = Date.now();
-var updateIN = 11;
+var updateIN = 10;
 
 function clockTime() {
 
