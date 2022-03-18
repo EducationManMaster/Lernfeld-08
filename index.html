@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+<head>
+
+  <meta charset="utf-8">
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+  <script type="text/javascript" src="js/values.js"></script>
+  <script type="text/javascript" src="js/websocket.js"></script>
+
+  <title>Server Status</title>
+
+</head>
+
+<body>
+
+  <div id="header">
+
+  </div>
+
+  <div id="main">
+
+    <div id="main_header">
+
+      <div id="main_header_icon"></div>
+      <div id="main_header_text">IT-Solutions Server Status</div>
+      <div id="main_header_time">Nächstes Update in 10 Sekunden...</div>
+
+    </div>
+
+    <div class="main_half">
+
+      <div class="half_header">Server</div>
+
+      <div class="half_status">
+        <div class="half_status_text">HTTP Server</div>
+        <div class="half_status_stat half_status_stat_good" id="http"></div>
+      </div>
+
+      <div class="half_status">
+        <div class="half_status_text">Websocket</div>
+        <div class="half_status_stat half_status_stat_good" id="websocket"></div>
+      </div>
+
+      <div class="half_spacer"></div>
+
+      <div class="half_status">
+        <div class="half_status_text">Prozessor</div>
+        <div class="half_status_stat half_status_stat_good" id="cpu"></div>
+      </div>
+
+      <div class="half_status">
+        <div class="half_status_text">Arbeitsspeicher</div>
+        <div class="half_status_stat half_status_stat_good" id="ram"></div>
+      </div>
+
+      <div class="half_status">
+        <div class="half_status_text">Temperatur</div>
+        <div class="half_status_stat half_status_stat_good" id="temp"></div>
+      </div>
+
+      <div class="half_spacer"></div>
+
+      <div class="half_status">
+        <div class="half_status_text">Speciherplatz belegung</div>
+        <div class="half_status_stat half_status_stat_good" id="disk"></div>
+      </div>
+
+      <div class="half_status">
+        <div class="half_bar">
+          <div class="half_bar_fill">
+            <div class="half_bar_text"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="half_spacer"></div>
+
+      <div class="half_status">
+        <div class="half_status_text">Netzwerkkarte</div>
+        <div class="half_status_stat half_status_stat_good" id="network"></div>
+      </div>
+
+      <div class="half_status">
+        <div class="half_status_text">IP Adresse</div>
+        <div class="half_status_stat half_status_stat_good" id="ip"></div>
+      </div>
+
+    </div>
+
+    <div class="main_half">
+
+      <div class="half_header">Prozesse</div>
+
+      <div class="half_status">
+        <div class="half_status_text">Aktive Prozesse</div>
+        <div class="half_status_stat half_status_stat_good" id="processes"></div>
+      </div>
+
+      <div class="half_spacer"></div>
+
+      <div id="pid">
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
