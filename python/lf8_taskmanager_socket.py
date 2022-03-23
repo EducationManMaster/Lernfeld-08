@@ -43,7 +43,7 @@ def getStats():
              '"disk":"'      + str(disk)      + '%",'  +
              '"network":"'   + str(network)   + '",'   +
              '"ip":"'        + str(ip)        + '",'   +
-             '"processes":"' + str(processes) + '"}'   )
+             '"processes":"' + str(processes) + '"}\n'   )
 
     f = open("./Leistungsdaten.log", "a")
     f.write(log)
