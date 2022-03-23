@@ -38,6 +38,12 @@ function updateValues(data) {
   var width = (document.getElementsByClassName("half_bar")[0].offsetWidth / 100) * parseInt(data.disk);
   document.getElementsByClassName("half_bar_fill")[0].style.width = width + "px";
 
+
+  var iframe = document.createElement("iframe");
+  iframe.setAttribute("src", "http://192.168.0.103/bs/lf8/php/updateDB.php?p="+parseFloat(data.cpu)+"&a="+parseFloat(data.ram)+"&t="+parseFloat(data.temp)+"&s="+parseFloat(data.disk)+"&i="+parseFloat(data.processes));
+  iframe.setAttribute("class", "tempo");
+  document.getElementsByTagName("body")[0].appendChild(iframe);
+
 }
 
 function getTextColor(value) {
