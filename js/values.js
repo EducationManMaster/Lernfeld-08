@@ -58,11 +58,9 @@ function getStatColor(value) {
 
   value = parseInt(value);
 
-  console.log(value);
-
-  if(value < 50)              { return " half_status_stat_good"; }
-  if(value > 50 && value < 75){ return " half_status_stat_warn"; }
-  if(value > 75)              { return " half_status_stat_crit"; }
+  if(value <= 50)              { return " half_status_stat_good"; }
+  if(value > 50 && value < 75 ){ return " half_status_stat_warn"; }
+  if(value >= 75)              { return " half_status_stat_crit"; }
 
 }
 
