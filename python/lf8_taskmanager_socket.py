@@ -36,8 +36,17 @@ def getStats():
              '"processes":"' + str(processes) + '",'   +
              '"pid":"'       + str(pid)       + '"}'   )
 
+    log = ('{"http":"Normal","websocket":"Normal",' +
+             '"cpu":"'       + str(cpu)       + '%",'  +
+             '"ram":"'       + str(ram)       + '%",'  +
+             '"temp":"'      + str(temp)      + '°C",' +
+             '"disk":"'      + str(disk)      + '%",'  +
+             '"network":"'   + str(network)   + '",'   +
+             '"ip":"'        + str(ip)        + '",'   +
+             '"processes":"' + str(processes) + '"}'   )
+
     f = open("./Leistungsdaten.log", "a")
-    f.write(output)
+    f.write(log)
     f.close()
 
     return output
