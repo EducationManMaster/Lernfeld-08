@@ -10,7 +10,7 @@ def getStats():
     ram = psutil.virtual_memory().percent
     temp = psutil.sensors_temperatures()
     disk = psutil.disk_usage('/').percent
-    network = "wlan0" #psutil.net_io_counters(pernic=True)
+    network = "eth0" #psutil.net_io_counters(pernic=True)
     ip = psutil.net_if_addrs()
     processes = os.popen("ps -e | wc -l").read().splitlines()[0]
     pid = os.popen("top -n 1 -b").read()
